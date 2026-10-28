@@ -20,7 +20,7 @@ jobs:
           from pathlib import Path
           from html.parser import HTMLParser
           from urllib.parse import urlsplit, unquote
-          import re, shutil, subprocess
+          import re, shutil, subprocess, json, hashlib
           files = subprocess.check_output(['git', 'ls-files', '-z']).decode().strip('\0').split('\0')
           allowed = {'.github', 'site', 'assets', 'docs'}
           for name in files:
@@ -32,6 +32,12 @@ jobs:
               if b'\0' not in data[:8192]:
                   text = data.decode('utf-8')
                   assert not re.search(r'(?:gh' + r'p_|github_' + r'pat_)[A-Za-z0-9_]{36,}|sk-' + r'(?:ant-|proj-)[A-Za-z0-9_-]{20,}|BEGIN .*PRIVATE ' + r'KEY|[A-Z]:[\\/]Users[\\/]', text), name
+          manifest = json.loads(Path('PUBLIC-CONTENTS.json').read_text(encoding='utf-8'))
+          entries = manifest['entries']
+          assert {e['path'] for e in entries} == set(files) - {'PUBLIC-CONTENTS.json'}
+          for entry in entries:
+              data = Path(entry['path']).read_bytes()
+              assert len(data) == entry['bytes'] and hashlib.sha256(data).hexdigest() == entry['sha256'], entry['path']
           out = Path('_site')
           shutil.copytree('site', out)
           for folder in ['assets','docs']:
