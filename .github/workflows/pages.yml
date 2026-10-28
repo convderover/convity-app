@@ -31,7 +31,7 @@ jobs:
               data = p.read_bytes()
               if b'\0' not in data[:8192]:
                   text = data.decode('utf-8')
-                  assert not re.search(r'(?:gh' + r'p_|github_' + r'pat_)[A-Za-z0-9_]{36,}|sk-' + r'(?:ant-|proj-)[A-Za-z0-9_-]{20,}|BEGIN .*PRIVATE KEY|[A-Z]:[\\/]Users[\\/]', text), name
+                  assert not re.search(r'(?:gh' + r'p_|github_' + r'pat_)[A-Za-z0-9_]{36,}|sk-' + r'(?:ant-|proj-)[A-Za-z0-9_-]{20,}|BEGIN .*PRIVATE ' + r'KEY|[A-Z]:[\\/]Users[\\/]', text), name
           out = Path('_site')
           shutil.copytree('site', out)
           for folder in ['assets','docs']:
@@ -45,7 +45,7 @@ jobs:
                           link = urlsplit(value)
                           if not link.scheme and not link.netloc and link.path:
                               assert (out/unquote(link.path)).is_file(), value
-          html = (out/'index.html').read_text()
+          html = (out/'index.html').read_text(encoding='utf-8')
           Links().feed(html)
           assert 'rel="canonical" href="https://convity.es/"' in html
           assert (out/'robots.txt').is_file() and (out/'sitemap.xml').is_file()
