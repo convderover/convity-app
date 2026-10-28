@@ -1,5 +1,13 @@
 # Privacy
 
+## This website and interest requests
+
+The static website at https://convity.es/ is hosted on GitHub Pages. It adds no analytics, cookies, advertising pixels, sign-in or embedded services. Assets and the video load from this domain. The synthetic simulation does not inspect files on your device. Like other web hosting, GitHub receives requests from your browser; GitHub states that Pages logs visitor IP addresses for security. See [GitHub Pages data collection](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection) and [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+
+Access requests and general questions open GitHub, where a GitHub account is required and your issue and username are public. Do not include your email, real name, employer, private code or personal data. We use the request to assess interest and reply in that issue; it does not grant software access. You can close your request or ask to withdraw there. GitHub controls its own account data and retention. Invited testers receive a separate private support channel; security vulnerabilities use GitHub's private reporting, not public issues.
+
+## The private alpha application
+
 Convity is designed to keep your code on your computer. This page describes what the **private alpha** does. It is a description of the software's behavior, not a legal privacy policy; one will be published before any public beta.
 
 ## What stays on your computer

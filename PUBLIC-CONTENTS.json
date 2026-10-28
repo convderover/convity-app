@@ -175,8 +175,8 @@
     },
     {
       "path": "docs/PRIVACY.md",
-      "bytes": 1821,
-      "sha256": "3eb737f07723f6eaa99c781693271a5d918f16fcc8799f6b21aad6b0e2d72d92"
+      "bytes": 3095,
+      "sha256": "439879f7d4804abd0778bb54bb41713fdd7f5483338f7de977e19d9483e4ce0a"
     },
     {
       "path": "docs/PUBLISH.md",
@@ -210,8 +210,8 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 14613,
-      "sha256": "c5c3607a61c49470cdcaaffb6c94469a33a4717809e74e276080f42ceab92ada"
+      "bytes": 14741,
+      "sha256": "fbf481feffe8ed551447d32a5af8ebfb3cc1c82cb0c793b4ebb7a8726f01ac7f"
     },
     {
       "path": "site/robots.txt",
