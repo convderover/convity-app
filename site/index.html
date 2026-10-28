@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; media-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Convity — Understand what your AI coding agent built</title>
+<meta name="description" content="Convity helps you explore what your coding agent built, understand how it works, and see what changed — visually and locally. Private alpha for Windows.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Convity — Understand what your AI coding agent built">
+<meta property="og:description" content="Explore code, see how it runs, and understand what changed after Claude Code or Codex — locally.">
+<meta property="og:image" content="https://convity.es/assets/social/github-social-preview-1280x640.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Convity showing a function before and after a change, side by side, with a plain explanation">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://convity.es/">
+<meta property="og:url" content="https://convity.es/">
+<meta name="twitter:title" content="Convity — Understand what your AI coding agent built">
+<meta name="twitter:description" content="Explore code and understand what changed after Claude Code or Codex — visually and locally.">
+<meta name="twitter:image" content="https://convity.es/assets/social/github-social-preview-1280x640.png">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script src="demo.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="wordmark" href="#main" aria-label="Convity, home">convity<span>.</span></a>
+  <nav aria-label="Sections">
+    <a href="#demo">Demo</a><a href="#features">Features</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a>
+  </nav>
+  <a class="btn btn-small" href="#access">Request Alpha Access</a>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">Private alpha · Windows 11 x64</p>
+      <h1>Your AI wrote the code. <em>Do you understand it?</em></h1>
+      <p class="lede">Convity helps you explore what your coding agent built, understand how it works, and see what changed — visually and locally.</p>
+      <div class="actions">
+        <a class="btn" href="#access">Request Alpha Access</a>
+        <a class="btn btn-ghost" href="#demo-video">Watch Demo</a>
+      </div>
+      <p class="fine">No account. No telemetry. Your code stays on your computer.</p>
+    </div>
+    <figure class="hero-shot reveal">
+      <img src="assets/screenshots/en/explained-1440.png" width="1440" height="900" alt="Convity's Changes mode: the same function before and after an edit, as two flow graphs side by side, with a plain explanation of the new check for negative prices">
+      <figcaption>Real screen · demo project with synthetic code</figcaption>
+    </figure>
+  </section>
+
+  <section class="problem" aria-labelledby="problem-title">
+    <h2 id="problem-title" class="kicker">The problem</h2>
+    <p class="statement">Agents write code faster than anyone can read it. After a few sessions, it is your project — but you are no longer sure how it works, which paths a function can take, or what the last change really did.</p>
+  </section>
+
+  <section id="features" class="features" aria-labelledby="features-title">
+    <h2 id="features-title" class="kicker">What Convity does</h2>
+    <p class="section-lede">It reads the code in a folder on your computer and turns each function into something you can explore — without running it.</p>
+    <div class="cards">
+      <article class="card reveal">
+        <p class="card-tag">Understand</p>
+        <h3>Learn how it works</h3>
+        <p>A step-by-step flow graph next to the code, with explanations from plain (L0) to technical (L4). Stop at a decision and choose a branch.</p>
+        <img src="assets/screenshots/en/understand-1440.png" width="1440" height="900" loading="lazy" alt="Understand mode: flow graph stopped at a decision with Yes and No choices, code below and explanation on the right">
+      </article>
+      <article class="card reveal">
+        <p class="card-tag">Explore</p>
+        <h3>See how it connects</h3>
+        <p>Which functions use this one and which it uses. Matches found only by name are marked as hypotheses, not facts.</p>
+        <img src="assets/screenshots/en/explore-1440.png" width="1440" height="900" loading="lazy" alt="Explore mode: the relations of a pricing function with the helpers it calls">
+      </article>
+      <article class="card reveal">
+        <p class="card-tag">Compare</p>
+        <h3>Understand what changed</h3>
+        <p>New, modified and removed functions between two versions, the graph before and after, and an explanation tied to the lines that justify it.</p>
+        <img src="assets/screenshots/en/changes-1440.png" width="1440" height="900" loading="lazy" alt="Changes mode: list of changed functions between two versions of the demo">
+      </article>
+    </div>
+    <p class="basis">Technical views distinguish: <span class="b-obs">observed</span> in the code, <span class="b-dec">declared</span> by the author, a <span class="b-hyp">hypothesis</span>, or a <span class="b-lim">limit</span> of the analysis. VibeConvity keeps those limits in plain words.</p>
+  </section>
+
+  <section id="demo" class="demo" aria-labelledby="demo-title">
+    <h2 id="demo-title" class="kicker">Demo</h2>
+    <div class="demo-media">
+      <figure>
+        <img id="comparison-animation" src="assets/screenshots/en/explained-1440.png" width="960" height="540" alt="Real demo: changes, graphs before and after, and an explanation">
+        <figcaption>Real screens, synthetic code. <button id="animation-toggle" type="button" aria-pressed="false">Play short animation</button></figcaption>
+      </figure>
+      <figure>
+        <video id="demo-video" controls preload="none" width="1280" height="720" poster="assets/social/github-social-preview-1280x640.png" aria-describedby="video-note">
+          <source src="assets/demo/convity-demo-57s.webm" type="video/webm">
+        </video>
+        <figcaption id="video-note">57-second walkthrough without sound. The first scene, an agent editing a function, is illustrative; the rest are real screens.</figcaption>
+      </figure>
+    </div>
+
+    <div class="sim" aria-labelledby="sim-title">
+      <div class="sim-head">
+        <h3 id="sim-title">Try the idea</h3>
+        <p class="sim-note"><strong>Static simulation with synthetic data.</strong> It is not the Convity engine and it cannot analyze your code. Convity itself runs on your computer.</p>
+      </div>
+      <div class="sim-tabs" role="group" aria-label="Version">
+        <button type="button" data-version="before" aria-pressed="false">Before</button>
+        <button type="button" data-version="after" aria-pressed="true">After</button>
+      </div>
+      <div class="sim-body">
+        <pre class="sim-code" aria-label="Code"><code id="sim-code"></code></pre>
+        <div class="sim-graph"><svg id="sim-svg" viewBox="0 0 346 428" role="img" aria-labelledby="sim-svg-title"><title id="sim-svg-title">Flow of the function total</title></svg></div>
+        <div class="sim-panel">
+          <p class="sim-step" id="sim-step" aria-live="polite"></p>
+          <div class="sim-choices" id="sim-choices" role="group" aria-label="Choose a path"></div>
+          <div class="sim-controls">
+            <button type="button" id="sim-restart">Restart</button>
+            <button type="button" id="sim-next" class="primary">Next step</button>
+          </div>
+          <p class="sim-explain" id="sim-explain"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vibe" aria-labelledby="vibe-title">
+    <div class="vibe-copy reveal">
+      <h2 id="vibe-title" class="kicker">New to code?</h2>
+      <p class="statement">VibeConvity explains a function in plain words: what it needs, what it gives back and its steps — without jargon.</p>
+      <p>Made for people building apps with AI who never learned to read code. When you want more, “See it in the code” takes you to the exact line.</p>
+    </div>
+    <figure class="vibe-shot reveal">
+      <img src="assets/screenshots/en/vibe-1440.png" width="1440" height="900" loading="lazy" alt="VibeConvity: a one-sentence summary, what the function needs, what it gives back and four plain steps">
+    </figure>
+  </section>
+
+  <section id="privacy" class="privacy" aria-labelledby="privacy-title">
+    <h2 id="privacy-title" class="kicker">Privacy</h2>
+    <div class="cols">
+      <div><h3>Stays on your computer</h3><ul><li>Your code and its analysis</li><li>Indexes in your user folder, removable with one command</li><li>Your preferences</li></ul></div>
+      <div><h3>Never, in the alpha</h3><ul><li>Telemetry or analytics</li><li>Accounts or sign-in</li><li>External AI — blocked even if keys exist</li><li>Running your project</li></ul></div>
+      <div><h3>Only when you choose</h3><ul><li>Copying a question for your own agent</li><li>Sharing a diagnostics text you reviewed</li><li>Reports you write yourself</li></ul></div>
+    </div>
+    <p class="fine">Honest limits: browser extensions or security software that inspect local pages can read what Convity shows (it warns you when it detects injected resources). The alpha has not had an independent security audit. This website sets no cookies and loads nothing from third parties.</p>
+  </section>
+
+  <section class="compat" aria-labelledby="compat-title">
+    <h2 id="compat-title" class="kicker">What has actually been tested</h2>
+    <table>
+      <thead><tr><th scope="col">Item</th><th scope="col">Status</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Windows 11 x64 portable package</th><td>Tested by the developer, including a clean extraction with no Node.js in <code>PATH</code>. Not yet tested on a second computer.</td></tr>
+        <tr><th scope="row">Claude Code skill <code>/convity</code></th><td>Used for real in the Claude Code desktop app on Windows 11.</td></tr>
+        <tr><th scope="row">Codex skill <code>$convity</code></th><td>Used for real in the Codex app on Windows 11.</td></tr>
+        <tr><th scope="row">Languages</th><td>JavaScript and TypeScript included. Python 3.9+ if installed.</td></tr>
+        <tr><th scope="row">macOS and Linux</th><td>Automated tests run there; no package yet.</td></tr>
+      </tbody>
+    </table>
+    <p class="fine">Convity is not affiliated with Anthropic or OpenAI.</p>
+  </section>
+
+  <section id="faq" class="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="kicker">Questions</h2>
+    <details><summary>How do I install it?</summary><p>Extract the ZIP into a new folder and open <code>Convity.cmd</code>. Node.js and TypeScript are included; nothing is installed system-wide and you do not need administrator rights. The package is not code-signed yet.</p></details>
+    <details><summary>What do I need?</summary><p>Windows 11 x64. Git only to compare commits of your own repository; Python only for <code>.py</code> files. No account, no API key.</p></details>
+    <details><summary>Which languages does it understand?</summary><p>JavaScript, TypeScript and Python.</p></details>
+    <details><summary>Does my code leave my computer?</summary><p>Not through Convity. External AI is blocked in the alpha and there is no telemetry. Questions for your agent are copied, never sent.</p></details>
+    <details><summary>Does it work with Claude Code and Codex?</summary><p>Optional skills open Convity from Claude Code (<code>/convity</code>) and Codex (<code>$convity</code>). They have been used for real on Windows 11 by the developer; other setups are not verified yet.</p></details>
+    <details><summary>How accurate is it?</summary><p>Convity describes what the code says and labels each statement as observed, declared, hypothesis or limit. Static analysis cannot know runtime values, and explanations can be incomplete. The code is always shown next to them.</p></details>
+    <details><summary>Is it available? How much does it cost?</summary><p>A free private alpha for 3 to 5 invited testers is being prepared. You can register your interest now; invitations depend on completion of distribution checks and evaluation terms. There is no public download or paid plan yet.</p></details>
+    <details><summary>Is it open source?</summary><p>No. Convity is proprietary. The public repository contains presentation material only.</p></details>
+  </section>
+
+  <section id="access" class="access" aria-labelledby="access-title">
+    <h2 id="access-title">Want to try it?</h2>
+    <p>We are looking for a few people who use Claude Code or Codex, are learning to code with AI, or need to understand changes made by an agent.</p>
+    <p>Register your interest using the GitHub form. <strong>Your request will be public.</strong> Use a GitHub username; do not include your email, real name, employer, private code or other personal information.</p>
+    <p><a class="btn" href="https://github.com/convderover/convity-app/issues/new?template=alpha-access.yml">Request Alpha Access on GitHub</a></p>
+    <p class="fine">A GitHub account is required. We reply in the issue. Registering interest does not grant access: distribution checks and evaluation terms must be completed before invitations. There is no public download.</p>
+    <p>General questions: <a href="https://github.com/convderover/convity-app/issues/new">public GitHub issues</a>. Invited testers: use the private support channel in your invitation. Security problems: <a href="https://github.com/convderover/convity-app/security/advisories/new">report privately</a>.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p><span class="wordmark small">convity<span>.</span></span> © 2026 Roberto Martín Gutiérrez</p>
+  <p><a href="docs/INSTALL.md">Documentation</a> · <a href="docs/TERMS.md">Terms</a> · <a href="docs/SECURITY.md">Security</a> · <a href="docs/LIMITATIONS.md">Limitations</a> · <a href="https://github.com/convderover/convity-app">GitHub</a></p>
+</footer>
+</body>
+</html>

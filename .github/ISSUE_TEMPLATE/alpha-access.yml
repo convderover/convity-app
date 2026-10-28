@@ -1,0 +1,48 @@
+name: Request alpha access
+description: Ask to join the Convity private alpha (Windows 11 x64). This issue is public.
+title: "Alpha access request"
+labels: ["alpha-access"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public.** Do not include your email, real name, company, code, file paths or any private information.
+        We reply here. If you are selected, we will ask in this issue how you prefer to receive the invitation.
+  - type: dropdown
+    id: profile
+    attributes:
+      label: Which describes you best?
+      options:
+        - I use Claude Code or Codex to write code
+        - I am building an app with AI and I am new to programming
+        - I need to understand changes made by an agent
+        - I am a student or learning to program
+    validations:
+      required: true
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Which coding agents do you use?
+      options:
+        - Claude Code
+        - Codex
+        - Both
+        - Neither
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: What would you like to understand better about your code?
+      description: One or two sentences. No code, please.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before sending
+      options:
+        - label: I have a Windows 11 x64 computer and a GitHub account.
+          required: true
+        - label: I have not included personal data, private code or credentials.
+          required: true

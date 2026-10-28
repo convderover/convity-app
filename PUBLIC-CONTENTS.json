@@ -1,0 +1,237 @@
+{
+  "product": "Convity",
+  "version": "0.3.0-alpha.3",
+  "content": "public presentation and documentation only; no engine source",
+  "entries": [
+    {
+      "path": ".gitattributes",
+      "bytes": 19,
+      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/alpha-access.yml",
+      "bytes": 1564,
+      "sha256": "cce98d6fc0467fadf993544a64c2910491e8ec6f816bf260737c9fa0fb3cee1a"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "bytes": 246,
+      "sha256": "bb0c725c5105be8a70577484d185df8be1df5967358ff9abf0834051ea0e1e3b"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "bytes": 3089,
+      "sha256": "60b20a49cd671bf8680afc9e92b3c32d9d0588860191f3d727f025991084b2fa"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 27,
+      "sha256": "426dd980a09267476d0d33a3be7c8789e7ef5259632bd7c86efbb165e3f90e61"
+    },
+    {
+      "path": "assets/brand/convity-wordmark.svg",
+      "bytes": 450,
+      "sha256": "81b1195d6e5eae539aa984d60d5da5b3383bc1523f4dd00cddc0c79a5942d7e7"
+    },
+    {
+      "path": "assets/brand/favicon.svg",
+      "bytes": 284,
+      "sha256": "9901ae1f8b08ee358e0dd6a4ba62aaf69c638454cb7c93a18c794058cbdf0b6c"
+    },
+    {
+      "path": "assets/demo/before-after.gif",
+      "bytes": 129469,
+      "sha256": "fca38e997942e04cc22c2409daee7cb1879eb3924830d39b2d2c802144e4311b"
+    },
+    {
+      "path": "assets/demo/convity-demo-57s.webm",
+      "bytes": 7296873,
+      "sha256": "f6468d57c9c348a2470c3918cdf19a88d1b461fafec20a5547b7111cc91abf58"
+    },
+    {
+      "path": "assets/screenshots/en/changes-1440.png",
+      "bytes": 62475,
+      "sha256": "66f6bf901df79482963a4744476fa1c8b69e6b55b673a4bf66c8a1090ed945f7"
+    },
+    {
+      "path": "assets/screenshots/en/detail-1440.png",
+      "bytes": 133948,
+      "sha256": "21d8b19115ecbe6c0b734ef0cebbaff5410423adb2e3c616282ed22bbace9096"
+    },
+    {
+      "path": "assets/screenshots/en/explained-1440.png",
+      "bytes": 174257,
+      "sha256": "6f06e142cdbeb67c29f77f55f2e63af7b0a0e649934fdd1d57e8fa688b20e659"
+    },
+    {
+      "path": "assets/screenshots/en/explore-1440.png",
+      "bytes": 177268,
+      "sha256": "af2716b48c6826c5418a5fc6ebb96e7ce9c8b0518e90b4972000222fb0a0d846"
+    },
+    {
+      "path": "assets/screenshots/en/mobile-375-light.png",
+      "bytes": 50771,
+      "sha256": "fec295cedac26dc3fdd6d766655a66003de77575949885c120525d99f3fcc265"
+    },
+    {
+      "path": "assets/screenshots/en/understand-1440.png",
+      "bytes": 173044,
+      "sha256": "cbf58670acac58ad683732f60e862abe784072d2823572b38970c50ce83f1c0e"
+    },
+    {
+      "path": "assets/screenshots/en/vibe-1440.png",
+      "bytes": 107382,
+      "sha256": "c80917f612aa69527b05c0fe8a01dbb7d583f03d6217c27a766ae5db7fbb2083"
+    },
+    {
+      "path": "assets/screenshots/en/welcome-1440.png",
+      "bytes": 163081,
+      "sha256": "d45a2130f547a3ea2898aac4d655a2b50f2a1b59efdd2a1422531af86c8f2dab"
+    },
+    {
+      "path": "assets/screenshots/es/changes-1440.png",
+      "bytes": 66946,
+      "sha256": "c3da8a78bcd829d6b844fe2ebb4080824979546b3cf51640e47ceea95ccd9690"
+    },
+    {
+      "path": "assets/screenshots/es/detail-1440.png",
+      "bytes": 142444,
+      "sha256": "31aa47015e40affe233ecb6272abd7a15623c51db4e37d81d3bf37dda69e8d79"
+    },
+    {
+      "path": "assets/screenshots/es/explained-1440.png",
+      "bytes": 183573,
+      "sha256": "9a37f175ba6393191cd3c6c6beea740d8aff46e718a32b13fa224c61feaa8fe5"
+    },
+    {
+      "path": "assets/screenshots/es/explore-1440.png",
+      "bytes": 179064,
+      "sha256": "b66b39a3ef3e91f614e5a39d79ec3fd373cb3c77bbbd72b50b2032e1a17545f9"
+    },
+    {
+      "path": "assets/screenshots/es/mobile-375-light.png",
+      "bytes": 49405,
+      "sha256": "a78fdbca4b5a66d158a5c693c1f400af0597d6c9916d7af32310895ee1746ffc"
+    },
+    {
+      "path": "assets/screenshots/es/understand-1440.png",
+      "bytes": 181709,
+      "sha256": "546ad5d8f9eea18e44aa5cda83bcfa0ce984817ee0c6756294e407dff0ac8fc4"
+    },
+    {
+      "path": "assets/screenshots/es/vibe-1440.png",
+      "bytes": 110447,
+      "sha256": "2b8b36603f21d803bf8782e253c6a4381f1c130c48b5d771e26ed73ee675dd6f"
+    },
+    {
+      "path": "assets/screenshots/es/welcome-1440.png",
+      "bytes": 177086,
+      "sha256": "f64501f6f510e6d1d010fc05f52c8a71f773ce3abf40daeddd780c9fdee7f7d0"
+    },
+    {
+      "path": "assets/social/github-social-preview-1280x640.png",
+      "bytes": 152095,
+      "sha256": "54e0070e249aa0595975949710d8c0d2e564389b547f0b5ee20516e656ec8bf6"
+    },
+    {
+      "path": "assets/social/linkedin-reddit-1200x627.png",
+      "bytes": 140473,
+      "sha256": "f0f25acb378c73145fe64b3432ac4abf4039a899ca06224aa9c7a63708c1d68d"
+    },
+    {
+      "path": "assets/social/producthunt-gallery-1270x760.png",
+      "bytes": 183769,
+      "sha256": "b4176997ad87226e461f5e4b24972a4bd64d83b942087b07d6d0890771c1a67f"
+    },
+    {
+      "path": "assets/social/producthunt-vibeconvity-1270x760.png",
+      "bytes": 129403,
+      "sha256": "fbafc610447855638bc50241b9574f15fc8951625dde26194e0c46cb213a5290"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 815,
+      "sha256": "3b2cba32ec09c2887b409598397c494a8eeafe5ed7a4e1287474c638b4cd849d"
+    },
+    {
+      "path": "docs/ACCESS.md",
+      "bytes": 1678,
+      "sha256": "5af4dcd488e00716b259967d6016f9c7f61f872434a321b4005da809afb41505"
+    },
+    {
+      "path": "docs/FAQ.md",
+      "bytes": 1874,
+      "sha256": "33bd0b9d4d0f85253e14aa74d1b1546eea10d28de8c98e747c343fad09136671"
+    },
+    {
+      "path": "docs/INSTALL.md",
+      "bytes": 3165,
+      "sha256": "17b621c450d75d694c9717b1ea4b3cfa818109987c7db546fe3f51cf2b8f15b3"
+    },
+    {
+      "path": "docs/LIMITATIONS.md",
+      "bytes": 1961,
+      "sha256": "bd54e55026f8798fdb6afe131ce2789709b9138bdef6251025fce84f9bf8f238"
+    },
+    {
+      "path": "docs/PRIVACY.md",
+      "bytes": 1821,
+      "sha256": "3eb737f07723f6eaa99c781693271a5d918f16fcc8799f6b21aad6b0e2d72d92"
+    },
+    {
+      "path": "docs/PUBLISH.md",
+      "bytes": 2177,
+      "sha256": "c4f18fd6bdafb4b80960c66b9c537609d08955f17e6f4f18ec57f3872c812357"
+    },
+    {
+      "path": "docs/RELEASE_NOTES.md",
+      "bytes": 951,
+      "sha256": "2bf884349f1e13969f614a947c485c10cadbbed37bc169c18fc384a3fa26be34"
+    },
+    {
+      "path": "README.es.md",
+      "bytes": 5636,
+      "sha256": "2d738c62117ee869bc3dc74b6383eb5256494ee013ab408bb970d763a4690246"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5960,
+      "sha256": "d089ca04e8da4d7ecd381a2e9881a20ceb2c8b0125bdafbeac73a9f976b226f5"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 1328,
+      "sha256": "37a1504a35b79579206a5472ab767a13075d7a29e6cd6756047ece222a7dc6c4"
+    },
+    {
+      "path": "site/demo.js",
+      "bytes": 9628,
+      "sha256": "4e54003574ec8bf677e92504e07a63dd45d70be563864dff8b6b68db10039a91"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 14613,
+      "sha256": "c5c3607a61c49470cdcaaffb6c94469a33a4717809e74e276080f42ceab92ada"
+    },
+    {
+      "path": "site/robots.txt",
+      "bytes": 63,
+      "sha256": "fcd2c5573166a0135bd4fa7ec2e648192e947d105b6c76c65a714d0a8110ddc0"
+    },
+    {
+      "path": "site/sitemap.xml",
+      "bytes": 154,
+      "sha256": "8fe9aa36aada3e2be74e70b3ccb12e361107b0dcf227262d71bf58f782d96d3b"
+    },
+    {
+      "path": "site/styles.css",
+      "bytes": 11547,
+      "sha256": "6a41fe40a33e498700e492ad41a4e934c3a837613b572e50a0f2893490fec7ce"
+    },
+    {
+      "path": "TERMS.md",
+      "bytes": 1730,
+      "sha256": "f477429f5387eda6c2380b38e8ad4a12ac12ae900602eeda424991cda8419a36"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+name: Website
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate public files and assembled links
+        run: |
+          python3 -I - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          from urllib.parse import urlsplit, unquote
+          import re, shutil, subprocess
+          files = subprocess.check_output(['git', 'ls-files', '-z']).decode().strip('\0').split('\0')
+          allowed = {'.github', 'site', 'assets', 'docs'}
+          for name in files:
+              p = Path(name)
+              assert not p.is_symlink(), name
+              assert p.parts[0] in allowed or name in {'README.md','README.es.md','TERMS.md','SECURITY.md','CONTRIBUTING.md','.gitignore','.gitattributes','PUBLIC-CONTENTS.json'}, name
+              assert not re.search(r'(^|/)(src|web|bin|node_modules|integrations|\.git|\.env)(/|$)|\.(exe|dll|sqlite|db|zip|py|mjs|ts)$', name), name
+              data = p.read_bytes()
+              if b'\0' not in data[:8192]:
+                  text = data.decode('utf-8')
+                  assert not re.search(r'(?:gh' + r'p_|github_' + r'pat_)[A-Za-z0-9_]{36,}|sk-' + r'(?:ant-|proj-)[A-Za-z0-9_-]{20,}|BEGIN .*PRIVATE KEY|[A-Z]:[\\/]Users[\\/]', text), name
+          out = Path('_site')
+          shutil.copytree('site', out)
+          for folder in ['assets','docs']:
+              shutil.copytree(folder, out/folder)
+          for name in ['TERMS.md','SECURITY.md']:
+              shutil.copyfile(name, out/'docs'/name)
+          class Links(HTMLParser):
+              def handle_starttag(self, tag, attrs):
+                  for key, value in attrs:
+                      if key in ['href','src','poster'] and value:
+                          link = urlsplit(value)
+                          if not link.scheme and not link.netloc and link.path:
+                              assert (out/unquote(link.path)).is_file(), value
+          html = (out/'index.html').read_text()
+          Links().feed(html)
+          assert 'rel="canonical" href="https://convity.es/"' in html
+          assert (out/'robots.txt').is_file() and (out/'sitemap.xml').is_file()
+          assert 'https://github.com/convderover/convity-app/issues/new?template=alpha-access.yml' in html
+          print(f'{len(files)} public files checked; static output ready')
+          PY
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: _site
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - id: deployment
+        uses: actions/deploy-pages@v4
